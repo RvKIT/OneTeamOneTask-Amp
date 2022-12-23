@@ -22,17 +22,15 @@ model User {
 
 model Task {
   createdAt DateTime @default(now())
-  id        String   @id @default(cuid())
+  id        String   @id @default(uuid())
   team      Team[]
   updatedAt DateTime @updatedAt
 }
 
 model Team {
-  createdAt    DateTime      @default(now())
-  id           String        @id @default(cuid())
+  id           String        @id @default(uuid())
   name         String
   tasks        Task[]
-  updatedAt    DateTime      @updatedAt
   usersInTeams UsersInTeam[]
 }
 

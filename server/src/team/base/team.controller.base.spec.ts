@@ -19,30 +19,22 @@ import { TeamService } from "../team.service";
 const nonExistingId = "nonExistingId";
 const existingId = "existingId";
 const CREATE_INPUT = {
-  createdAt: new Date(),
   id: "exampleId",
   name: "exampleName",
-  updatedAt: new Date(),
 };
 const CREATE_RESULT = {
-  createdAt: new Date(),
   id: "exampleId",
   name: "exampleName",
-  updatedAt: new Date(),
 };
 const FIND_MANY_RESULT = [
   {
-    createdAt: new Date(),
     id: "exampleId",
     name: "exampleName",
-    updatedAt: new Date(),
   },
 ];
 const FIND_ONE_RESULT = {
-  createdAt: new Date(),
   id: "exampleId",
   name: "exampleName",
-  updatedAt: new Date(),
 };
 
 const service = {
@@ -125,24 +117,14 @@ describe("Team", () => {
       .post("/teams")
       .send(CREATE_INPUT)
       .expect(HttpStatus.CREATED)
-      .expect({
-        ...CREATE_RESULT,
-        createdAt: CREATE_RESULT.createdAt.toISOString(),
-        updatedAt: CREATE_RESULT.updatedAt.toISOString(),
-      });
+      .expect(CREATE_RESULT);
   });
 
   test("GET /teams", async () => {
     await request(app.getHttpServer())
       .get("/teams")
       .expect(HttpStatus.OK)
-      .expect([
-        {
-          ...FIND_MANY_RESULT[0],
-          createdAt: FIND_MANY_RESULT[0].createdAt.toISOString(),
-          updatedAt: FIND_MANY_RESULT[0].updatedAt.toISOString(),
-        },
-      ]);
+      .expect([FIND_MANY_RESULT[0]]);
   });
 
   test("GET /teams/:id non existing", async () => {
@@ -160,11 +142,7 @@ describe("Team", () => {
     await request(app.getHttpServer())
       .get(`${"/teams"}/${existingId}`)
       .expect(HttpStatus.OK)
-      .expect({
-        ...FIND_ONE_RESULT,
-        createdAt: FIND_ONE_RESULT.createdAt.toISOString(),
-        updatedAt: FIND_ONE_RESULT.updatedAt.toISOString(),
-      });
+      .expect(FIND_ONE_RESULT);
   });
 
   test("POST /teams existing resource", async () => {
@@ -173,11 +151,7 @@ describe("Team", () => {
       .post("/teams")
       .send(CREATE_INPUT)
       .expect(HttpStatus.CREATED)
-      .expect({
-        ...CREATE_RESULT,
-        createdAt: CREATE_RESULT.createdAt.toISOString(),
-        updatedAt: CREATE_RESULT.updatedAt.toISOString(),
-      })
+      .expect(CREATE_RESULT)
       .then(function () {
         agent
           .post("/teams")

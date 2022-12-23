@@ -190,10 +190,8 @@ export class TaskControllerBase {
     const results = await this.service.findTeam(params.id, {
       ...query,
       select: {
-        createdAt: true,
         id: true,
         name: true,
-        updatedAt: true,
       },
     });
     if (results === null) {
