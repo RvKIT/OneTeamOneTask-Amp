@@ -1,0 +1,200 @@
+[
+  {
+    "role": "MEMBER",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Task",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Task",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Task",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Task",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Task",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Team",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "Team",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Team",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "Team",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Team",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Team",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "Team",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "Team",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "UsersInTeam",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "UsersInTeam",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "UsersInTeam",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "UsersInTeam",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "UsersInTeam",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "UsersInTeam",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "UsersInTeam",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "UsersInTeam",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "MEMBER",
+    "resource": "UsersInTeam",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ADMIN",
+    "resource": "UsersInTeam",
+    "action": "read:any",
+    "attributes": "*"
+  }
+]
