@@ -1,0 +1,44 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("DB_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt    DateTime      @default(now())
+  email        String?
+  firstName    String?
+  id           String        @id @default(cuid())
+  lastName     String?
+  password     String
+  roles        Json
+  updatedAt    DateTime      @updatedAt
+  username     String        @unique
+  usersInTeams UsersInTeam[]
+}
+
+model Task {
+  createdAt DateTime @default(now())
+  id        String   @id @default(uuid())
+  team      Team[]
+  updatedAt DateTime @updatedAt
+}
+
+model Team {
+  id           String        @id @default(uuid())
+  name         String
+  tasks        Task[]
+  usersInTeams UsersInTeam[]
+}
+
+model UsersInTeam {
+  id      String   @id @default(cuid())
+  isAdmin Boolean?
+  team    Team     @relation(fields: [teamId], references: [id])
+  teamId  String
+  user    User     @relation(fields: [userId], references: [id])
+  userId  String
+}
