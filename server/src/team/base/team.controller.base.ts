@@ -97,6 +97,7 @@ export class TeamControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
+
         id: true,
         name: true,
       },
